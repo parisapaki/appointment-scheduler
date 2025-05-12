@@ -1,6 +1,9 @@
 import { useForm } from "react-hook-form";
 import type { SubmitHandler } from "react-hook-form";
 import { useAuthStore } from "../../store/authStore";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export type Input = {
   email: string;
@@ -8,21 +11,31 @@ export type Input = {
 };
 
 export default function LoginForm() {
+  const navigate = useNavigate();
+  const queryClient = useQueryClient();
+
+  const PostData = (userdata: Input) =>
+    axios.post("http://localhost:3001/users", userdata).then((res) => res.data);
+
+  const { login } = useAuthStore();
+
+  const mutation = useMutation({
+    mutationFn: PostData,
+    onSuccess: (data) => {
+      login(data);
+      queryClient.invalidateQueries({ queryKey: ["users"] });
+      navigate("/mm");
+    },
+  });
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<Input>();
 
-  const { login } = useAuthStore();
-
   const onSubmit: SubmitHandler<Input> = (data) => {
-    console.log(data);
-    const userdata = {
-      email: data.email,
-      pass: data.pass,
-    };
-    login(userdata);
+    mutation.mutate(data);
   };
 
   return (
@@ -63,6 +76,7 @@ export default function LoginForm() {
         </div>
         <div className="mb-5">
           <input
+            type="password"
             className="p-3 w-80 focus:border-purple-700 rounded border-2 outline-none"
             autoComplete="off"
             placeholder="Password"
