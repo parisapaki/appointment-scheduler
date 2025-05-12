@@ -1,7 +1,8 @@
 import { useForm } from "react-hook-form";
 import type { SubmitHandler } from "react-hook-form";
+import { useAuthStore } from "../../store/authStore";
 
-type Input = {
+export type Input = {
   email: string;
   pass: string;
 };
@@ -13,7 +14,16 @@ export default function LoginForm() {
     formState: { errors },
   } = useForm<Input>();
 
-  const onSubmit: SubmitHandler<Input> = (data) => console.log(data);
+  const { login } = useAuthStore();
+
+  const onSubmit: SubmitHandler<Input> = (data) => {
+    console.log(data);
+    const userdata = {
+      email: data.email,
+      pass: data.pass,
+    };
+    login(userdata);
+  };
 
   return (
     <div className="w-screen h-screen flex justify-center items-center bg-gray-100">
