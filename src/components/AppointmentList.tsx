@@ -7,8 +7,8 @@ export default function AppointmentList() {
     <div className="flex justify-center items-center min-h-screen">
       <div className="relative flex flex-col rounded-lg bg-white shadow-sm border border-slate-200 w-full max-w-md">
         <nav className="flex min-w-[240px] flex-col gap-1 p-1.5">
-          {appointments?.data?.length > 0 ? (
-            appointments.data.map((item) => (
+          {appointments?.data?.pages?.length > 0 ? (
+            appointments?.data?.pages.flat().map((item) => (
               <div
                 key={item.id}
                 role="button"
@@ -46,31 +46,34 @@ export default function AppointmentList() {
               </div>
             ))
           ) : (
-            <p className="text-center">null</p>
+            <p className="text-center">No appointments available</p>
           )}
         </nav>
-        <div className="mx-3 mb-3 mt-4 text-purple-800">
-          <button
-            type="button"
-            className="inline-flex cursor-pointer rounded text-xs font-bold uppercase tracking-widest"
-          >
-            <svg
-              className="mr-3 block h-4 w-4 align-middle uppercase tracking-wider"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+        {appointments.hasNextPage && (
+          <div className="mx-3 mb-3 mt-4 text-purple-800">
+            <button
+              onClick={() => appointments.fetchNextPage()}
+              type="button"
+              className="inline-flex cursor-pointer rounded text-xs font-bold uppercase tracking-widest"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-              />
-            </svg>
-            Load more users
-          </button>
-        </div>
+              <svg
+                className="mr-3 block h-4 w-4 align-middle uppercase tracking-wider"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                />
+              </svg>
+              Load more users
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

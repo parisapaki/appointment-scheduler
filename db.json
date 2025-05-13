@@ -18,20 +18,84 @@
   ],
   "appointments": [
     {
-      "title": "appointments1",
-      "date": "2 Aug 2020"
+      "title": "Dentist Appointment",
+      "date": "14 Aug 2025"
     },
     {
-      "title": "appointments2",
-      "date": "14 Aug 2018"
+      "title": "Team Sync-up",
+      "date": "15 Aug 2025"
     },
     {
-      "title": "appointments3",
-      "date": "25 may 2021"
+      "title": "Eye Checkup",
+      "date": "16 Aug 2025"
     },
     {
-      "title": "appointments4",
-      "date": "8 sep 2025"
+      "title": "Yoga Class",
+      "date": "17 Aug 2025"
+    },
+    {
+      "title": "Project Briefing",
+      "date": "18 Aug 2025"
+    },
+    {
+      "title": "Haircut Appointment",
+      "date": "19 Aug 2025"
+    },
+    {
+      "title": "Car Service",
+      "date": "20 Aug 2025"
+    },
+    {
+      "title": "Client Call with ABC Corp",
+      "date": "21 Aug 2025"
+    },
+    {
+      "title": "Monthly Checkup",
+      "date": "22 Aug 2025"
+    },
+    {
+      "title": "Webinar on React",
+      "date": "23 Aug 2025"
+    },
+    {
+      "title": "Interview at TechNova",
+      "date": "24 Aug 2025"
+    },
+    {
+      "title": "Networking Event",
+      "date": "25 Aug 2025"
+    },
+    {
+      "title": "Team Building Workshop",
+      "date": "26 Aug 2025"
+    },
+    {
+      "title": "Follow-up with Dr. Smith",
+      "date": "27 Aug 2025"
+    },
+    {
+      "title": "Vaccination Appointment",
+      "date": "28 Aug 2025"
+    },
+    {
+      "title": "Lunch with Alex",
+      "date": "29 Aug 2025"
+    },
+    {
+      "title": "Final Project Demo",
+      "date": "30 Aug 2025"
+    },
+    {
+      "title": "Birthday Party",
+      "date": "1 Sep 2025"
+    },
+    {
+      "title": "Parent-Teacher Meeting",
+      "date": "2 Sep 2025"
+    },
+    {
+      "title": "Gym Session",
+      "date": "3 Sep 2025"
     }
   ]
 }
