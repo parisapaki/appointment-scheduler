@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import type { Input } from "../components/Auth/LoginForm";
+import type { Input } from "../components/LoginForm";
 
 type AuthStore = {
   user: Input | null;

@@ -1,9 +1,9 @@
-import LoginForm from "./components/Auth/LoginForm";
+import AppointmentList from "./components/AppointmentList";
 
 export default function App() {
   return (
     <div>
-      <LoginForm />
+      <AppointmentList />
     </div>
   );
 }
