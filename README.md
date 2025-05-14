@@ -17,7 +17,7 @@ A fully-featured **Appointment Scheduler** app built with **React**, **React Que
 
 ```bash
 git clone https://github.com/parisapaki/appointment-scheduler.git
-cd game-hub
+cd appointment-scheduler
 npm install
 npm run server
 npm run dev
