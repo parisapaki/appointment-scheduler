@@ -18,82 +18,159 @@
   ],
   "appointments": [
     {
+      "id": "a1b2",
       "title": "Dentist Appointment",
-      "date": "14 Aug 2025"
+      "date": "14 Aug 2025",
+      "services": [
+        {
+          "title": "Finish project proposal",
+          "description": "Due on 4/1/23",
+          "completed": false
+        },
+        {
+          "title": "Buy groceries",
+          "description": "Bananas, milk, bread",
+          "completed": false
+        },
+        {
+          "title": "Go for a run",
+          "description": "3 miles",
+          "completed": false
+        },
+        {
+          "id": "1747224389262",
+          "title": "ئئئئئ",
+          "description": "No description",
+          "completed": false
+        },
+        {
+          "id": "1747224650062",
+          "title": "سینا گوسفنده",
+          "description": "No description",
+          "completed": false
+        }
+      ]
     },
     {
+      "id": "c3d4",
       "title": "Team Sync-up",
-      "date": "15 Aug 2025"
+      "date": "15 Aug 2025",
+      "services": [
+        {
+          "id": "1747314013873",
+          "title": "task1",
+          "description": "No description",
+          "completed": false
+        }
+      ]
     },
     {
+      "id": "e5f6",
       "title": "Eye Checkup",
-      "date": "16 Aug 2025"
+      "date": "16 Aug 2025",
+      "services": [
+        {
+          "id": "1747224297353",
+          "title": "jjjjj",
+          "description": "No description",
+          "completed": false
+        },
+        {
+          "id": "1747313798520",
+          "title": "اااا",
+          "description": "No description",
+          "completed": false
+        },
+        {
+          "id": "1747313909395",
+          "title": "تغتغ",
+          "description": "No description",
+          "completed": false
+        }
+      ]
     },
     {
+      "id": "g7h8",
       "title": "Yoga Class",
       "date": "17 Aug 2025"
     },
     {
+      "id": "i9j0",
       "title": "Project Briefing",
       "date": "18 Aug 2025"
     },
     {
+      "id": "k1l2",
       "title": "Haircut Appointment",
       "date": "19 Aug 2025"
     },
     {
+      "id": "m3n4",
       "title": "Car Service",
       "date": "20 Aug 2025"
     },
     {
+      "id": "o5p6",
       "title": "Client Call with ABC Corp",
       "date": "21 Aug 2025"
     },
     {
+      "id": "q7r8",
       "title": "Monthly Checkup",
       "date": "22 Aug 2025"
     },
     {
+      "id": "s9t0",
       "title": "Webinar on React",
       "date": "23 Aug 2025"
     },
     {
+      "id": "u1v2",
       "title": "Interview at TechNova",
       "date": "24 Aug 2025"
     },
     {
+      "id": "w3x4",
       "title": "Networking Event",
       "date": "25 Aug 2025"
     },
     {
+      "id": "y5z6",
       "title": "Team Building Workshop",
       "date": "26 Aug 2025"
     },
     {
+      "id": "a7b8",
       "title": "Follow-up with Dr. Smith",
       "date": "27 Aug 2025"
     },
     {
+      "id": "c9d0",
       "title": "Vaccination Appointment",
       "date": "28 Aug 2025"
     },
     {
+      "id": "e1f2",
       "title": "Lunch with Alex",
       "date": "29 Aug 2025"
     },
     {
+      "id": "g3h4",
       "title": "Final Project Demo",
       "date": "30 Aug 2025"
     },
     {
+      "id": "i5j6",
       "title": "Birthday Party",
       "date": "1 Sep 2025"
     },
     {
+      "id": "k7l8",
       "title": "Parent-Teacher Meeting",
       "date": "2 Sep 2025"
     },
     {
+      "id": "m9n0",
       "title": "Gym Session",
       "date": "3 Sep 2025"
     }

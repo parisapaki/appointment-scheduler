@@ -1,16 +1,21 @@
-import { useData } from "../hooks/usedata";
+import { useData } from "../hooks/useData";
+import { useNavigate } from "react-router-dom";
 
 export default function AppointmentList() {
   const { appointments } = useData();
+  const navigate = useNavigate();
+
+  const allAppointments =
+    appointments?.data?.pages?.flatMap((page) => page) ?? [];
 
   return (
     <div className="flex justify-center items-center min-h-screen">
       <div className="relative flex flex-col rounded-lg bg-white shadow-sm border border-slate-200 w-full max-w-md">
         <nav className="flex min-w-[240px] flex-col gap-1 p-1.5">
-          {appointments?.data?.pages?.length > 0 ? (
-            appointments?.data?.pages.flat().map((item) => (
+          {allAppointments.length > 0 ? (
+            allAppointments.map((item) => (
               <div
-                key={item.id}
+                key={item.id ?? `${item.title}-${item.date}`}
                 role="button"
                 className="text-slate-800 flex w-full items-center rounded-md p-2 pl-3"
               >
@@ -21,6 +26,7 @@ export default function AppointmentList() {
 
                 <div className="ml-auto grid place-items-center justify-self-end">
                   <button
+                    onClick={() => navigate(`/appointment/${item.id}`)}
                     className="rounded-md border border-transparent p-2.5 text-center text-sm transition-all text-slate-600 hover:bg-slate-200 focus:bg-slate-200 active:bg-slate-200 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                     type="button"
                   >
@@ -49,7 +55,8 @@ export default function AppointmentList() {
             <p className="text-center">No appointments available</p>
           )}
         </nav>
-        {appointments.hasNextPage && (
+
+        {appointments?.hasNextPage && (
           <div className="mx-3 mb-3 mt-4 text-purple-800">
             <button
               onClick={() => appointments.fetchNextPage()}
