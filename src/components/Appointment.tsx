@@ -1,3 +1,9 @@
+import Service from "./Service";
+
 export default function Appointment() {
-  return <div>Appointment</div>;
+  return (
+    <>
+      <Service />
+    </>
+  );
 }
